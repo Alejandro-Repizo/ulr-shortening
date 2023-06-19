@@ -1,0 +1,72 @@
+
+
+<header class="container">
+    <h1 class="header__logo">
+        <a href="#">Shortly</a>
+    </h1>
+
+    <nav class="nav font-small" aria-label="Main">
+        <ul>
+            <li>
+                <a href="#">Features</a>
+            </li>
+            <li>
+                <a href="#">Pricing</a>
+            </li>
+            <li>
+                <a href="#">Resources</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="header__options font-small">
+        <a href="#" class="button button--transparent">login</a>
+        <a href="#" class="button">Sign up</a>
+    </div>
+</header>
+
+
+<style>
+
+    header {
+		display: grid; 
+		grid-template-columns: fit-content(10ch) 2fr 1fr;
+		gap: clamp(1rem, 6vmax, 1.3rem);
+	}
+
+	.header__logo {
+		justify-self: flex-end;
+	}
+
+	.nav {
+		display: flex;
+		width: fit-content;
+		align-items: center;
+		color: var(--clr-neutral-grayish-violet);
+	}
+
+	.nav ul {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		list-style: none;
+		margin-inline: min(1rem, 2vw);
+		gap: clamp(1rem, 6vmax, 1.3rem);
+	}
+
+	.nav ul li:hover {
+		color: initial;
+		transition: color 500ms ease;
+	}
+
+	.header__options {
+		display: flex;
+		align-items: center;
+		justify-content: space-evenly;
+	}   
+
+    .font-small {
+        font-size: clamp(.875rem, 4vw + 1rem, 1rem);
+    }
+
+</style>

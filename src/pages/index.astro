@@ -1,81 +1,125 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Form from "../components/Form";
 ---
 
 <Layout title="Welcome to Astro.">
+	<Header/>
+
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card
-				href="https://docs.astro.build/"
-				title="Documentation"
-				body="Learn how Astro works and explore the official API docs."
-			/>
-			<Card
-				href="https://astro.build/integrations/"
-				title="Integrations"
-				body="Supercharge your project with new frameworks and libraries."
-			/>
-			<Card
-				href="https://astro.build/themes/"
-				title="Themes"
-				body="Explore a galaxy of community-built starter themes."
-			/>
-			<Card
-				href="https://astro.build/chat/"
-				title="Community"
-				body="Come say hi to our amazing Discord community. ❤️"
-			/>
-		</ul>
+		<section class="container">
+			<div>
+				<h2>More than just shorter links</h2>
+				<p>
+					Build your brand's recongition and get detailed insights on
+					how your links are performing.
+				</p>
+				<a href="#">Get started</a>
+			</div>
+			<img src="" alt="" />
+		</section>
+
+		<Form />
+
+		<section>
+			<h2>Advanced Statistics</h2>
+			<p>
+				Track how your links are performing across the web with our
+				advanced statistics dashboard.
+			</p>
+
+			<article>
+				<img src="" alt="" />
+				<h3>Brand Recognition</h3>
+				<p>
+					Boost your brand recognition with each click. Generic links
+					don’t mean a thing. Branded links help instil confidence in
+					your content.
+				</p>
+			</article>
+
+			<article>
+				<img src="" alt="" />
+				<h3>Detailed Records</h3>
+				<p>
+					Gain insights into who is clicking your links. Knowing when
+					and where people engage with your content helps inform
+					better decisions.
+				</p>
+			</article>
+
+			<article>
+				<img src="" alt="" />
+				<h3>Fully Customizable</h3>
+				<p>
+					Improve brand awareness and content discoverability through
+					customizable links, supercharging audience engagement.
+				</p>
+			</article>
+		</section>
 	</main>
+
+	<aside>
+		<h2>Boost your links today</h2>
+		<a href="#">Get Started</a>
+	</aside>
+
+	<footer>
+		<h1>Shortly</h1>
+
+		<section>
+			<div>
+				<h2 id="footer-features">Features</h2>
+				<nav aria-labelledby="footer-features">
+					<a href="#">Link Shortening</a>
+					<a href="#">Branded Links</a>
+					<a href="#">Analytics</a>
+				</nav>
+			</div>
+			<div>
+				<h2 id="footer-resources">Resources</h2>
+				<nav aria-labelledby="footer-resources">
+					<a href="#">Blog</a>
+					<a href="#">Developers</a>
+					<a href="#">Support</a>
+				</nav>
+			</div>
+			<div>
+				<h2 id="footer-company">Company</h2>
+				<nav aria-labelledby="footer-company">
+					<a href="#">About</a>
+					<a href="#">Our Team</a>
+					<a href="#">Careers</a>
+					<a href="#">Contact</a>
+				</nav>
+			</div>
+		</section>
+
+		<section>
+			<a href="#" target="_blank" title="Share on Facebook, new window">
+				<span class="fab fa-facebook-square" aria-hidden="true"></span>
+				<span class="sr-only">Share on Facebook, new window</span>
+			</a>
+			<a href="#" target="_blank" title="Share on Twitter, new window">
+				<span class="fab fa-facebook-square" aria-hidden="true"></span>
+				<span class="sr-only">Share on Twitter, new window</span>
+			</a>
+			<a href="#" target="_blank" title="Share on Pinterest, new window">
+				<span class="fab fa-facebook-square" aria-hidden="true"></span>
+				<span class="sr-only">Share on Pinterest, new window</span>
+			</a>
+			<a href="#" target="_blank" title="Share on Instagram, new window">
+				<span class="fab fa-facebook-square" aria-hidden="true"></span>
+				<span class="sr-only">Share on Instagram, new window</span>
+			</a>
+		</section>
+	</footer>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+<style is:global>
+
+
+	
+	
 </style>
