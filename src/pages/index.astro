@@ -1,125 +1,185 @@
----
-import Layout from "../layouts/Layout.astro";
-import Header from "../components/Header.astro";
-import Form from "../components/Form";
----
+	---
+	import Layout from "../layouts/Layout.astro";
+	import Header from "../components/Header.astro";
+	import Form from "../components/Form";
+	---
 
-<Layout title="Welcome to Astro.">
-	<Header/>
+	<Layout title="Welcome to Astro.">
+		<Header />
 
-	<main>
-		<section class="container">
-			<div>
-				<h2>More than just shorter links</h2>
-				<p>
-					Build your brand's recongition and get detailed insights on
-					how your links are performing.
-				</p>
-				<a href="#">Get started</a>
-			</div>
-			<img src="" alt="" />
-		</section>
+		<main>
+			<section class="container hero">
+				<div class="hero__wrapper">
+					<div class="hero__content">
+						<h2>More than just shorter links</h2>
+						<p>
+							Build your brand’s recognition and get detailed insights
+							on how your links are performing.
+						</p>
+						<a href="#" class="button button--big">Get started</a>
+					</div>
+					<img src="/images/illustration-working.svg" alt="" />
+				</div>
 
-		<Form />
+				<Form />
+			</section>
 
-		<section>
-			<h2>Advanced Statistics</h2>
-			<p>
-				Track how your links are performing across the web with our
-				advanced statistics dashboard.
-			</p>
+			<section style={{backgroundColor: "var(--clr-neutral-grayish-violet)"}}>
+				<div class="container">
+					<h2>Advanced Statistics</h2>
+					<p>
+						Track how your links are performing across the web with our
+						advanced statistics dashboard.
+					</p>
 
-			<article>
-				<img src="" alt="" />
-				<h3>Brand Recognition</h3>
-				<p>
-					Boost your brand recognition with each click. Generic links
-					don’t mean a thing. Branded links help instil confidence in
-					your content.
-				</p>
-			</article>
+					<article>
+						<img src="" alt="" />
+						<h3>Brand Recognition</h3>
+						<p>
+							Boost your brand recognition with each click. Generic
+							links don’t mean a thing. Branded links help instil
+							confidence in your content.
+						</p>
+					</article>
 
-			<article>
-				<img src="" alt="" />
-				<h3>Detailed Records</h3>
-				<p>
-					Gain insights into who is clicking your links. Knowing when
-					and where people engage with your content helps inform
-					better decisions.
-				</p>
-			</article>
+					<article>
+						<img src="" alt="" />
+						<h3>Detailed Records</h3>
+						<p>
+							Gain insights into who is clicking your links. Knowing
+							when and where people engage with your content helps
+							inform better decisions.
+						</p>
+					</article>
 
-			<article>
-				<img src="" alt="" />
-				<h3>Fully Customizable</h3>
-				<p>
-					Improve brand awareness and content discoverability through
-					customizable links, supercharging audience engagement.
-				</p>
-			</article>
-		</section>
-	</main>
+					<article>
+						<img src="" alt="" />
+						<h3>Fully Customizable</h3>
+						<p>
+							Improve brand awareness and content discoverability
+							through customizable links, supercharging audience
+							engagement.
+						</p>
+					</article>
+				</div>
+			</section>
+		</main>
 
-	<aside>
-		<h2>Boost your links today</h2>
-		<a href="#">Get Started</a>
-	</aside>
+		<aside>
+			<h2>Boost your links today</h2>
+			<a href="#">Get Started</a>
+		</aside>
 
-	<footer>
-		<h1>Shortly</h1>
+		<footer>
+			<h1>Shortly</h1>
 
-		<section>
-			<div>
-				<h2 id="footer-features">Features</h2>
-				<nav aria-labelledby="footer-features">
-					<a href="#">Link Shortening</a>
-					<a href="#">Branded Links</a>
-					<a href="#">Analytics</a>
-				</nav>
-			</div>
-			<div>
-				<h2 id="footer-resources">Resources</h2>
-				<nav aria-labelledby="footer-resources">
-					<a href="#">Blog</a>
-					<a href="#">Developers</a>
-					<a href="#">Support</a>
-				</nav>
-			</div>
-			<div>
-				<h2 id="footer-company">Company</h2>
-				<nav aria-labelledby="footer-company">
-					<a href="#">About</a>
-					<a href="#">Our Team</a>
-					<a href="#">Careers</a>
-					<a href="#">Contact</a>
-				</nav>
-			</div>
-		</section>
+			<section>
+				<div>
+					<h2 id="footer-features">Features</h2>
+					<nav aria-labelledby="footer-features">
+						<a href="#">Link Shortening</a>
+						<a href="#">Branded Links</a>
+						<a href="#">Analytics</a>
+					</nav>
+				</div>
+				<div>
+					<h2 id="footer-resources">Resources</h2>
+					<nav aria-labelledby="footer-resources">
+						<a href="#">Blog</a>
+						<a href="#">Developers</a>
+						<a href="#">Support</a>
+					</nav>
+				</div>
+				<div>
+					<h2 id="footer-company">Company</h2>
+					<nav aria-labelledby="footer-company">
+						<a href="#">About</a>
+						<a href="#">Our Team</a>
+						<a href="#">Careers</a>
+						<a href="#">Contact</a>
+					</nav>
+				</div>
+			</section>
 
-		<section>
-			<a href="#" target="_blank" title="Share on Facebook, new window">
-				<span class="fab fa-facebook-square" aria-hidden="true"></span>
-				<span class="sr-only">Share on Facebook, new window</span>
-			</a>
-			<a href="#" target="_blank" title="Share on Twitter, new window">
-				<span class="fab fa-facebook-square" aria-hidden="true"></span>
-				<span class="sr-only">Share on Twitter, new window</span>
-			</a>
-			<a href="#" target="_blank" title="Share on Pinterest, new window">
-				<span class="fab fa-facebook-square" aria-hidden="true"></span>
-				<span class="sr-only">Share on Pinterest, new window</span>
-			</a>
-			<a href="#" target="_blank" title="Share on Instagram, new window">
-				<span class="fab fa-facebook-square" aria-hidden="true"></span>
-				<span class="sr-only">Share on Instagram, new window</span>
-			</a>
-		</section>
-	</footer>
-</Layout>
+			<section>
+				<a href="#" target="_blank" title="Share on Facebook, new window">
+					<span class="fab fa-facebook-square" aria-hidden="true"></span>
+					<span class="sr-only">Share on Facebook, new window</span>
+				</a>
+				<a href="#" target="_blank" title="Share on Twitter, new window">
+					<span class="fab fa-facebook-square" aria-hidden="true"></span>
+					<span class="sr-only">Share on Twitter, new window</span>
+				</a>
+				<a href="#" target="_blank" title="Share on Pinterest, new window">
+					<span class="fab fa-facebook-square" aria-hidden="true"></span>
+					<span class="sr-only">Share on Pinterest, new window</span>
+				</a>
+				<a href="#" target="_blank" title="Share on Instagram, new window">
+					<span class="fab fa-facebook-square" aria-hidden="true"></span>
+					<span class="sr-only">Share on Instagram, new window</span>
+				</a>
+			</section>
+		</footer>
+	</Layout>
 
-<style is:global>
+	<style>
+		.hero {
+			position: relative;
+		}
+
+		.hero__wrapper {
+			height: 100vh;
+			display: flex;
+			flex-wrap: wrap;
+			align-content: center;
+			color: var(--clr-neutral-gray);
+		}
+
+		.hero__wrapper img {
+			object-fit: cover;
+			object-position: 7vw -5vmin;
+			height: min(60vh, 600px);
+			width: 40%;
+			justify-self: end;
+			transition: 180ms width ease-in;
+			overflow: visible;
+		}
 
 
-	
-	
-</style>
+		.hero__content {
+			width: min(100vw, 55ch);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+
+		.hero__content :is(h2, p) {
+			margin-block: 0.5rem;
+		}
+
+		.hero__content a {
+			margin-block: 2rem;
+		}
+
+		.hero__content h2 {
+			color: var(--clr-neutral-dark-blue);
+			font-size: var(--font-size-lg);
+			font-weight: bold;
+			line-height: 1.1;
+		}
+
+		@media screen and (max-width: 768px) {
+			.hero__wrapper {
+				text-align: center;
+			}
+
+			.hero__wrapper img {
+				order: -1;
+			}
+
+			.hero__content {
+				align-items: center;
+			}
+		}
+	</style>

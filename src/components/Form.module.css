@@ -1,0 +1,55 @@
+.content {
+    --layout-padding: clamp(1.8rem, 5%, 3rem);
+
+    position: absolute;
+    top: calc(100% - var(--layout-padding));
+    margin-inline: auto;
+    width: 100%;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.form {
+    padding: var(--layout-padding);
+    background-image: url(/images/bg-shorten-desktop.svg);
+    background-position: center center;
+    background-size: cover;
+    background-color: var(--clr-primary-dark-violet);
+}
+
+.form label>* {
+    font-size: clamp(1rem, 4vw + 1rem, 1.125rem);
+}
+
+.form label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(0.6rem, 6vmax, 1rem);
+}
+
+.form input {
+    width: 80%;
+    padding: 0.7rem 2.2rem;
+    border-radius: 0.5rem;
+    border: 1px solid transparent;
+    font-weight: normal;
+    color: var(--clr-neutral-gray);
+}
+
+.form input::placeholder {
+    font-weight: normal;
+    color: var(--clr-neutral-gray);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}

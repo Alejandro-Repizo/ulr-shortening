@@ -1,34 +1,43 @@
 
 
-<header class="container">
-    <h1 class="header__logo">
-        <a href="#">Shortly</a>
-    </h1>
+<header>
+	<div class="container header">
+		<h1 class="header__logo">
+			<a href="#">Shortly</a>
+		</h1>
 
-    <nav class="nav font-small" aria-label="Main">
-        <ul>
-            <li>
-                <a href="#">Features</a>
-            </li>
-            <li>
-                <a href="#">Pricing</a>
-            </li>
-            <li>
-                <a href="#">Resources</a>
-            </li>
-        </ul>
-    </nav>
+		<nav class="nav font-small" aria-label="Main">
+			<ul>
+				<li>
+					<a href="#">Features</a>
+				</li>
+				<li>
+					<a href="#">Pricing</a>
+				</li>
+				<li>
+					<a href="#">Resources</a>
+				</li>
+			</ul>
+		</nav>
 
-    <div class="header__options font-small">
-        <a href="#" class="button button--transparent">login</a>
-        <a href="#" class="button">Sign up</a>
-    </div>
+		<div class="header__options font-small">
+			<a href="#" class="button button--transparent">login</a>
+			<a href="#" class="button">Sign up</a>
+		</div>
+	</div>	
 </header>
 
 
 <style>
 
     header {
+		position: sticky;
+		top: 0;
+		background-color: var(--clr-primary-white);
+		z-index: 2;
+	}
+
+	.header {
 		display: grid; 
 		grid-template-columns: fit-content(10ch) 2fr 1fr;
 		gap: clamp(1rem, 6vmax, 1.3rem);
@@ -36,13 +45,14 @@
 
 	.header__logo {
 		justify-self: flex-end;
+		font-size: var(--font-size-md);
 	}
 
 	.nav {
 		display: flex;
 		width: fit-content;
 		align-items: center;
-		color: var(--clr-neutral-grayish-violet);
+		color: var(--clr-neutral-gray);
 	}
 
 	.nav ul {
@@ -66,7 +76,8 @@
 	}   
 
     .font-small {
-        font-size: clamp(.875rem, 4vw + 1rem, 1rem);
+        font-size: var(--font-size-sm);
+		font-weight: bold;
     }
 
 </style>
