@@ -1,8 +1,9 @@
 .content {
-    --layout-padding: clamp(1.8rem, 5%, 3rem);
+    --clr-error: hsl(0, 87%, 67%);
 
+    height: 8vmax;
     position: absolute;
-    top: calc(100% - var(--layout-padding));
+    top: calc(100% - 8vmax / 2);
     margin-inline: auto;
     width: 100%;
     border-radius: 0.5rem;
@@ -10,15 +11,18 @@
 }
 
 .form {
-    padding: var(--layout-padding);
+    height: 100%;
+    display: grid;
+    align-content: center;
+    padding-inline: clamp(1.5rem, 5%, 2rem);
     background-image: url(/images/bg-shorten-desktop.svg);
     background-position: center center;
     background-size: cover;
-    background-color: var(--clr-primary-dark-violet);
+    background-color: var(--clr-secondary);
 }
 
-.form label>* {
-    font-size: clamp(1rem, 4vw + 1rem, 1.125rem);
+.form :is(input, button) {
+    font-size: var(--fs-base);
 }
 
 .form label {
@@ -34,12 +38,13 @@
     border-radius: 0.5rem;
     border: 1px solid transparent;
     font-weight: normal;
-    color: var(--clr-neutral-gray);
+    color: var(--clr-text);
+  
 }
 
 .form input::placeholder {
     font-weight: normal;
-    color: var(--clr-neutral-gray);
+    color: var(--clr-text);
 }
 
 .sr-only {

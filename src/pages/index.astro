@@ -1,185 +1,253 @@
-	---
-	import Layout from "../layouts/Layout.astro";
-	import Header from "../components/Header.astro";
-	import Form from "../components/Form";
-	---
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Form from "../components/Form";
+---
 
-	<Layout title="Welcome to Astro.">
-		<Header />
+<Layout title="Welcome to Astro.">
+	<Header />
 
-		<main>
-			<section class="container hero">
-				<div class="hero__wrapper">
-					<div class="hero__content">
-						<h2>More than just shorter links</h2>
-						<p>
-							Build your brand’s recognition and get detailed insights
-							on how your links are performing.
-						</p>
-						<a href="#" class="button button--big">Get started</a>
-					</div>
-					<img src="/images/illustration-working.svg" alt="" />
+	<main>
+		<section class="wrapper hero">
+			<div class="hero__wrapper">
+				<div class="hero__content">
+					<h1>More than just shorter links</h1>
+					<p>
+						Build your brand’s recognition and get detailed insights
+						on how your links are performing.
+					</p>
+					<a href="#" class="button button--big">Get started</a>
 				</div>
+				<img src="/images/illustration-working.svg" alt="" />
+			</div>
 
-				<Form />
-			</section>
+			<Form />
+		</section>
 
-			<section style={{backgroundColor: "var(--clr-neutral-grayish-violet)"}}>
-				<div class="container">
+		<section class="statistics__color">
+			<div class="wrapper statistics">
+				<div class="statistics__title">
 					<h2>Advanced Statistics</h2>
 					<p>
-						Track how your links are performing across the web with our
-						advanced statistics dashboard.
+						Track how your links are performing across the web with
+						our advanced statistics dashboard.
 					</p>
+				</div>
 
-					<article>
-						<img src="" alt="" />
-						<h3>Brand Recognition</h3>
-						<p>
-							Boost your brand recognition with each click. Generic
-							links don’t mean a thing. Branded links help instil
-							confidence in your content.
+				<div class="statistics__content">
+					<article class="article">
+						<img
+							class="article__image"
+							src="/images/icon-brand-recognition.svg"
+							alt=""
+						/>
+						<h3 class="article__title">Brand Recognition</h3>
+						<p class="article__content">
+							Boost your brand recognition with each click.
+							Generic links don’t mean a thing. Branded links help
+							instil confidence in your content.
 						</p>
 					</article>
 
-					<article>
-						<img src="" alt="" />
-						<h3>Detailed Records</h3>
-						<p>
-							Gain insights into who is clicking your links. Knowing
-							when and where people engage with your content helps
-							inform better decisions.
+					<article class="article">
+						<img
+							class="article__image"
+							src="/images/icon-detailed-records.svg"
+							alt=""
+						/>
+						<h3 class="article__title">Detailed Records</h3>
+						<p class="article__content">
+							Gain insights into who is clicking your links.
+							Knowing when and where people engage with your
+							content helps inform better decisions.
 						</p>
 					</article>
 
-					<article>
-						<img src="" alt="" />
-						<h3>Fully Customizable</h3>
-						<p>
+					<article class="article">
+						<img
+							class="article__image"
+							src="/images/icon-fully-customizable.svg"
+							alt=""
+						/>
+						<h3 class="article__title">Fully Customizable</h3>
+						<p class="article__content">
 							Improve brand awareness and content discoverability
 							through customizable links, supercharging audience
 							engagement.
 						</p>
 					</article>
 				</div>
-			</section>
-		</main>
+			</div>
+		</section>
+	</main>
 
-		<aside>
-			<h2>Boost your links today</h2>
-			<a href="#">Get Started</a>
-		</aside>
+	<aside>
+		<h2>Boost your links today</h2>
+		<a href="#">Get Started</a>
+	</aside>
 
-		<footer>
-			<h1>Shortly</h1>
+	<footer>
+		<h1>Shortly</h1>
 
-			<section>
-				<div>
-					<h2 id="footer-features">Features</h2>
-					<nav aria-labelledby="footer-features">
-						<a href="#">Link Shortening</a>
-						<a href="#">Branded Links</a>
-						<a href="#">Analytics</a>
-					</nav>
-				</div>
-				<div>
-					<h2 id="footer-resources">Resources</h2>
-					<nav aria-labelledby="footer-resources">
-						<a href="#">Blog</a>
-						<a href="#">Developers</a>
-						<a href="#">Support</a>
-					</nav>
-				</div>
-				<div>
-					<h2 id="footer-company">Company</h2>
-					<nav aria-labelledby="footer-company">
-						<a href="#">About</a>
-						<a href="#">Our Team</a>
-						<a href="#">Careers</a>
-						<a href="#">Contact</a>
-					</nav>
-				</div>
-			</section>
+		<section>
+			<div>
+				<h2 id="footer-features">Features</h2>
+				<nav aria-labelledby="footer-features">
+					<a href="#">Link Shortening</a>
+					<a href="#">Branded Links</a>
+					<a href="#">Analytics</a>
+				</nav>
+			</div>
+			<div>
+				<h2 id="footer-resources">Resources</h2>
+				<nav aria-labelledby="footer-resources">
+					<a href="#">Blog</a>
+					<a href="#">Developers</a>
+					<a href="#">Support</a>
+				</nav>
+			</div>
+			<div>
+				<h2 id="footer-company">Company</h2>
+				<nav aria-labelledby="footer-company">
+					<a href="#">About</a>
+					<a href="#">Our Team</a>
+					<a href="#">Careers</a>
+					<a href="#">Contact</a>
+				</nav>
+			</div>
+		</section>
 
-			<section>
-				<a href="#" target="_blank" title="Share on Facebook, new window">
-					<span class="fab fa-facebook-square" aria-hidden="true"></span>
-					<span class="sr-only">Share on Facebook, new window</span>
-				</a>
-				<a href="#" target="_blank" title="Share on Twitter, new window">
-					<span class="fab fa-facebook-square" aria-hidden="true"></span>
-					<span class="sr-only">Share on Twitter, new window</span>
-				</a>
-				<a href="#" target="_blank" title="Share on Pinterest, new window">
-					<span class="fab fa-facebook-square" aria-hidden="true"></span>
-					<span class="sr-only">Share on Pinterest, new window</span>
-				</a>
-				<a href="#" target="_blank" title="Share on Instagram, new window">
-					<span class="fab fa-facebook-square" aria-hidden="true"></span>
-					<span class="sr-only">Share on Instagram, new window</span>
-				</a>
-			</section>
-		</footer>
-	</Layout>
+		<section>
+			<a href="#" target="_blank" title="Share on Facebook, new window">
+				<span class="fab fa-facebook-square" aria-hidden="true"></span>
+				<span class="sr-only">Share on Facebook, new window</span>
+			</a>
+			<a href="#" target="_blank" title="Share on Twitter, new window">
+				<span class="fab fa-facebook-square" aria-hidden="true"></span>
+				<span class="sr-only">Share on Twitter, new window</span>
+			</a>
+			<a href="#" target="_blank" title="Share on Pinterest, new window">
+				<span class="fab fa-facebook-square" aria-hidden="true"></span>
+				<span class="sr-only">Share on Pinterest, new window</span>
+			</a>
+			<a href="#" target="_blank" title="Share on Instagram, new window">
+				<span class="fab fa-facebook-square" aria-hidden="true"></span>
+				<span class="sr-only">Share on Instagram, new window</span>
+			</a>
+		</section>
+	</footer>
+</Layout>
 
-	<style>
-		.hero {
-			position: relative;
-		}
+<style>
+	.hero {
+		position: relative;
+	}
 
+	.hero__wrapper {
+		height: 100vh;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: center;
+		color: var(--clr-neutral-gray);
+	}
+
+	.hero__wrapper img {
+		object-fit: cover;
+		object-position: 7vw -5vmin;
+		height: min(60vh, 600px);
+		width: 40%;
+		justify-self: end;
+		transition: 180ms width ease-in;
+		overflow: visible;
+	}
+
+	.hero__content {
+		width: min(100vw, 55ch);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+	}
+
+	.hero__content p {
+		color: var(--clr-text);
+	}
+
+	.hero__content a {
+		margin-block: 2rem;
+	}
+
+	@media screen and (max-width: 768px) {
 		.hero__wrapper {
-			height: 100vh;
-			display: flex;
-			flex-wrap: wrap;
-			align-content: center;
-			color: var(--clr-neutral-gray);
+			text-align: center;
 		}
 
 		.hero__wrapper img {
-			object-fit: cover;
-			object-position: 7vw -5vmin;
-			height: min(60vh, 600px);
-			width: 40%;
-			justify-self: end;
-			transition: 180ms width ease-in;
-			overflow: visible;
+			order: -1;
 		}
-
 
 		.hero__content {
-			width: min(100vw, 55ch);
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
+			align-items: center;
 		}
+	}
 
-		.hero__content :is(h2, p) {
-			margin-block: 0.5rem;
-		}
+	.statistics {
+		height: 100vh;
+		display: grid;
+		place-content: center;
+	}
 
-		.hero__content a {
-			margin-block: 2rem;
-		}
+	.statistics :is(p) {
+		color: var(--clr-text);
+	}
 
-		.hero__content h2 {
-			color: var(--clr-neutral-dark-blue);
-			font-size: var(--font-size-lg);
-			font-weight: bold;
-			line-height: 1.1;
-		}
+	.statistics__color {
+		background-color: var(--clr-accent);
+	}
 
-		@media screen and (max-width: 768px) {
-			.hero__wrapper {
-				text-align: center;
-			}
+	.statistics__title {
+		width: min(100vw - 2rem, 50ch);
+		text-align: center;
+		margin-inline: auto;
+	}
 
-			.hero__wrapper img {
-				order: -1;
-			}
+	.statistics__title :is(h2, p) {
+		margin-block: 1rem;
+	}
 
-			.hero__content {
-				align-items: center;
-			}
-		}
-	</style>
+	.statistics__content {
+		margin-block: clamp(2rem, 5%, 3rem);
+		display: flex;
+		flex-flow: wrap;
+		justify-content: center;
+		gap: clamp(1.5rem, 6vmax, 2rem);
+	}
+
+	.article {
+		width: min(100vw - 2rem, 30ch);
+		position: relative;
+		padding-inline: 1.7rem;
+		padding-block: 0 2rem;
+		border-radius: 0.5rem;
+		border: 2px solid var(--clr-accent);
+		background-color: var(--clr-white);
+		text-align: left;
+	}
+
+	.article :is(h3, p) {
+		margin-block: 0 0.5rem;
+	}
+
+	.article__content {
+		font-size: var(--fs--100);
+	}
+
+	.article__image {
+		width: min(80px, 35%);
+		background-color: var(--clr-secondary);
+		border-radius: 100%;
+		padding: 1.2rem;
+		transform: translateY(-40%);
+		margin-block: -0.1rem;
+	}
+</style>
