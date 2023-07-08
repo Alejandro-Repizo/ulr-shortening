@@ -47,6 +47,7 @@ const {title} = Astro.props;
 		--clr-body: hsl(255, 11%, 22%);
 		--clr-primary: hsl(180, 66%, 49%);
 		--clr-secondary: hsl(257, 27%, 26%);
+		--clr-secondary-dark: hsl(260, 8%, 14%);
 		--clr-accent: hsl(230, 25%, 95%);
 		--clr-white: hsl(0, 0%, 100%);
 
@@ -127,6 +128,18 @@ const {title} = Astro.props;
 
 	.flow > * + * {
 		margin-top: var(--margin-height, 1rem);
+	}
+	
+	.sr-only {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border-width: 0;
 	}
 
 	.button {

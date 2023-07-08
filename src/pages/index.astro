@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import Form from "../components/Form";
 ---
 
@@ -81,61 +82,12 @@ import Form from "../components/Form";
 		</section>
 	</main>
 
-	<aside>
+	<aside class="aside flow">
 		<h2>Boost your links today</h2>
-		<a href="#">Get Started</a>
+		<a href="#" class="button button--big">Get Started</a>
 	</aside>
 
-	<footer>
-		<h1>Shortly</h1>
-
-		<section>
-			<div>
-				<h2 id="footer-features">Features</h2>
-				<nav aria-labelledby="footer-features">
-					<a href="#">Link Shortening</a>
-					<a href="#">Branded Links</a>
-					<a href="#">Analytics</a>
-				</nav>
-			</div>
-			<div>
-				<h2 id="footer-resources">Resources</h2>
-				<nav aria-labelledby="footer-resources">
-					<a href="#">Blog</a>
-					<a href="#">Developers</a>
-					<a href="#">Support</a>
-				</nav>
-			</div>
-			<div>
-				<h2 id="footer-company">Company</h2>
-				<nav aria-labelledby="footer-company">
-					<a href="#">About</a>
-					<a href="#">Our Team</a>
-					<a href="#">Careers</a>
-					<a href="#">Contact</a>
-				</nav>
-			</div>
-		</section>
-
-		<section>
-			<a href="#" target="_blank" title="Share on Facebook, new window">
-				<span class="fab fa-facebook-square" aria-hidden="true"></span>
-				<span class="sr-only">Share on Facebook, new window</span>
-			</a>
-			<a href="#" target="_blank" title="Share on Twitter, new window">
-				<span class="fab fa-facebook-square" aria-hidden="true"></span>
-				<span class="sr-only">Share on Twitter, new window</span>
-			</a>
-			<a href="#" target="_blank" title="Share on Pinterest, new window">
-				<span class="fab fa-facebook-square" aria-hidden="true"></span>
-				<span class="sr-only">Share on Pinterest, new window</span>
-			</a>
-			<a href="#" target="_blank" title="Share on Instagram, new window">
-				<span class="fab fa-facebook-square" aria-hidden="true"></span>
-				<span class="sr-only">Share on Instagram, new window</span>
-			</a>
-		</section>
-	</footer>
+	<Footer/>
 </Layout>
 
 <style>
@@ -144,7 +96,7 @@ import Form from "../components/Form";
 	}
 
 	.hero__wrapper {
-		height: 100vh;
+		min-height: 100vh;
 		display: flex;
 		flex-wrap: wrap;
 		align-content: center;
@@ -192,12 +144,12 @@ import Form from "../components/Form";
 	}
 
 	.statistics {
-		height: 100vh;
+		min-height: 100vh;
 		display: grid;
 		place-content: center;
 	}
 
-	.statistics :is(p) {
+	.statistics :is(p) {	
 		color: var(--clr-text);
 	}
 
@@ -220,18 +172,33 @@ import Form from "../components/Form";
 		display: flex;
 		flex-flow: wrap;
 		justify-content: center;
-		gap: clamp(1.5rem, 6vmax, 2rem);
+		gap: 4rem 1.8rem;
 	}
 
 	.article {
-		width: min(100vw - 2rem, 30ch);
 		position: relative;
+		margin-top: var(--margin-top, 0);
 		padding-inline: 1.7rem;
 		padding-block: 0 2rem;
+		width: min(100vw - 2rem, 30ch);
+		height: fit-content;
 		border-radius: 0.5rem;
 		border: 2px solid var(--clr-accent);
 		background-color: var(--clr-white);
 		text-align: left;
+		z-index: 1;
+	}
+
+	.article:where(:nth-child(2)) {
+		--margin-top: 3rem;
+	}
+
+	.article:where(:nth-child(3)) {
+		--margin-top: 6rem;
+	}
+
+	.article:nth-child(2n + 1) {
+		z-index: 2;
 	}
 
 	.article :is(h3, p) {
@@ -243,11 +210,84 @@ import Form from "../components/Form";
 	}
 
 	.article__image {
-		width: min(80px, 35%);
+		position: relative;
+		width: min(4.5rem, 35%);
 		background-color: var(--clr-secondary);
 		border-radius: 100%;
-		padding: 1.2rem;
+		padding: clamp(0.8rem, 8%, 1.2rem);
 		transform: translateY(-40%);
 		margin-block: -0.1rem;
+	}
+
+	.article:nth-child(2)::after,
+	.article:nth-child(2)::before {
+		content: "";
+		position: absolute;
+		top: 40%;
+		width: 2.2rem;
+		aspect-ratio: 4 / 1;
+		background-color: var(--clr-primary);
+		z-index: -1;
+	}
+
+	.article:nth-child(2)::before {
+		right: 100%;
+	}
+
+	.article:nth-child(2)::after {
+		left: 100%;
+	}
+
+	@media screen and (max-width: 1069px) { 
+		.article {
+			--margin-top: initial;
+			height: auto;
+		}
+
+		.article:nth-child(2)::after,
+		.article:nth-child(2)::before {
+			display: none;
+		}
+
+	}
+
+	@media screen and (max-width: 662px) {
+		.article__image {
+			position: relative;
+			left: 50%;
+			transform: translate(-50%, -40%);
+		}
+
+		.article:nth-child(2)::after,
+		.article:nth-child(2)::before {
+			position: absolute;
+			top: initial;
+			left: 50%;
+			display: block;
+			width: 0.7rem;
+			aspect-ratio: 1 / 4;
+			transform: translateX(-50%);
+		}
+
+		.article:nth-child(2)::after {
+			top: 100%;
+		}
+
+		.article:nth-child(2)::before {
+			bottom: 110%;
+		}
+	}
+
+	.aside {
+		--margin-height: 2rem;
+
+		padding: clamp(2.5rem, 5%, 3rem);
+	    display: grid;
+    	place-items: center;
+		color: var(--clr-white);
+		background-image: url(/images/bg-boost-desktop.svg);
+		background-position: center center;
+		background-size: cover;
+		background-color: var(--clr-secondary);
 	}
 </style>
